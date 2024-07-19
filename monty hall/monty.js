@@ -39,23 +39,5 @@ for (let i = 0; i <= 1000; i++) {
 
 
 
-const peopleBirthday = ["jan-1", "jun-5", "may-5", "march-3", "april-10", "jan-1", "july-7", "october-27", "march-3", "june-9", "october-6", "may-10", "april-10", "november-10", "december-6"];
 
-const findMatches = (array, value) => {
-  return array.filter((birthday) => birthday === value);
-};
-
-const matches = findMatches(peopleBirthday, "jan-1");
-console.log(matches); // Output: ["jan-1", "jan-1"]
-
-In this example, the findMatches function takes an array and a value as arguments. It uses the filter() method to create a new array with only the elements that match the value. The console.log statement will output an array with all the matches.
-
-If you want to find all duplicates in the array, you can use a similar approach:
-
-const findDuplicates = (array) => {
-  return array.filter((birthday, index, self) => self.indexOf(birthday) !== index);
-};
-
-const duplicates = findDuplicates(peopleBirthday);
-console.log(duplicates); // Output: ["jan-1", "march-3", "april-10"]
 
